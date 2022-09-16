@@ -9,15 +9,17 @@ import { CargarimagenesService } from 'src/app/servicios/cargarimagenes.service'
 })
 export class GenerarpublicacionComponent implements OnInit {
 
-  valor1: string = "";
-  valor2: string = "";
+  precio: string = "";
+  direccion: string = "";
+  ambientes: string = "";
+  localidad: string = "";
   aux: boolean = false;
 
 
   constructor(public cargarImg: CargarimagenesService, public router: Router) {}
 
   enviar(){
-    this.cargarImg.objetoPublicacionService.push(this.valor1, this.valor2);
+    this.cargarImg.objetoPublicacionService.push(this.precio, this.direccion, this.ambientes, this.localidad);
     this.aux = true;
     this.cargarImg.aux = true;
     this.router.navigate(["/home"]);

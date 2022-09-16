@@ -1,9 +1,17 @@
 <form>
-    <input type="text" placeholder="valor1" [(ngModel)]="valor1" [ngModelOptions]="{standalone: true}"><br><br>
-    <input type="text" placeholder="valor2" [(ngModel)]="valor2" [ngModelOptions]="{standalone: true}"><br><br>
-
+    <!-- 
+        precio
+        direccion
+        numero de ambientes
+        localidad
+        imagenes    
+    -->
+    <input type="text" placeholder="Precio" [(ngModel)]="precio" [ngModelOptions]="{standalone: true}"><br><br>
+    <input type="text" placeholder="Direccion" [(ngModel)]="direccion" [ngModelOptions]="{standalone: true}"><br><br>
+    <input type="text" placeholder="Numero de ambientes" [(ngModel)]="ambientes" [ngModelOptions]="{standalone: true}"><br><br>
+    <input type="text" placeholder="Localidad" [(ngModel)]="localidad" [ngModelOptions]="{standalone: true}"><br><br>
+    
     <!-- imagen -->
-
     <div>
         <div *ngFor="let url of cargarImg.urls">
         <img [src]="url" alt="">

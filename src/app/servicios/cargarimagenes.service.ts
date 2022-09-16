@@ -7,11 +7,7 @@ import { FormGroup } from '@angular/forms';
 export class CargarimagenesService {
 
   urls: any = [];
-  aux: boolean = false;
-  direccion: string ="";
-  ambientes: number;
-  localidad: string = "";
-
+  aux: boolean = false; 
 
   valor1: string = "";
   valor2: string = "";
@@ -20,7 +16,7 @@ export class CargarimagenesService {
 
   myForm: FormGroup;
 
-  constructor() { }
+  constructor() {}
 
   selecImg(event: any){
     if (event.target.files) {

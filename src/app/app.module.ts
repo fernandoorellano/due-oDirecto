@@ -21,6 +21,7 @@ import { FooterComponent } from './vistas/footer/footer.component';
 import { CargarimagenComponent } from './vistas/cargarimagen/cargarimagen.component';
 import { GenerarpublicacionComponent } from './vistas/generarpublicacion/generarpublicacion.component';
 import { RecientesComponent } from './vistas/recientes/recientes.component';
+import { ComentarioComponent } from './vistas/comentario/comentario.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RecientesComponent } from './vistas/recientes/recientes.component';
     CargarimagenComponent,
     GenerarpublicacionComponent,
     RecientesComponent,
+    ComentarioComponent,
   ],
   imports: [
     BrowserModule,

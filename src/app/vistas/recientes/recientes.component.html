@@ -1,19 +1,15 @@
-<div class="row rowInteres">
-    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+<div class="row rowRecientes">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" (click)="enviarInmueble()">
         <div class="columna">
-            <!-- valores ingresados -->
-            <div>
-              <div class="descripcionAnuncio" *ngFor="let item of cargarImg.objetoPublicacionService"> <!-- datos del usuario -->
-                  <p>Numero de ambientes:</p>
-                  <p>valor: {{item}}</p>
-                  <p>Localidad</p>
-                  <button>VER MAS</button>
-              </div>
-              
-            
-              <div *ngFor="let url of cargarImg.urls"> <!-- imagenes -->
-                <img [src]="url" alt="">
-              </div>
+            <div *ngFor="let url of cargarImg.urls"> <!-- imagenes -->
+              <img [src]="url" alt="">
+            </div>
+            <p>${{cargarImg.objetoPublicacionService[0]}}</p> <!-- precio -->
+            <p>{{cargarImg.objetoPublicacionService[1]}}</p> <!-- direccion -->
+            <div class="descripcionAnuncio"> <!-- datos del usuario -->
+                <p>Numero de ambientes: {{cargarImg.objetoPublicacionService[2]}}</p> <!-- imagenes -->
+                <p>{{cargarImg.objetoPublicacionService[3]}}</p> <!--Localidad-->
+                <button>VER MAS</button>
             </div>
         </div>
     </div>
